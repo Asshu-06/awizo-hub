@@ -14,7 +14,7 @@ const Blog = () => {
       date: '2024-01-15',
       readTime: '5 min read',
       category: 'Digital Marketing',
-      image: '/images/blog-1.jpg'
+      video: '/digitalmarketing.mp4'
     },
     {
       id: 2,
@@ -25,7 +25,7 @@ const Blog = () => {
       date: '2024-01-10',
       readTime: '8 min read',
       category: 'Career',
-      image: '/images/blog-2.jpg'
+      video: '/career.mp4'
     },
     {
       id: 3,
@@ -36,7 +36,7 @@ const Blog = () => {
       date: '2024-01-05',
       readTime: '6 min read',
       category: 'Education',
-      image: '/images/blog-3.jpg'
+      video: '/abroad education.mp4'
     }
   ];
 
@@ -55,10 +55,13 @@ const Blog = () => {
             {blogPosts.map((post) => (
               <article key={post.id} className="blog-card">
                 <div className="blog-image">
-                  <img 
-                    src={post.image} 
-                    alt={post.title} 
-                    onError={(e) => e.target.style.display = 'none'}
+                  <video 
+                    src={post.video}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   />
                   <span className="blog-category">{post.category}</span>
                 </div>
