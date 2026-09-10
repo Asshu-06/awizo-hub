@@ -3,6 +3,15 @@ import ContactForm from '../components/common/ContactForm';
 import './Careers.css';
 
 const Careers = () => {
+  const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER || '+917845787567';
+  
+  const handleApplyNow = (position) => {
+    const message = `Hi! I would like to apply for the ${position.title} position (${position.type}, ${position.location}).`;
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/${whatsappNumber.replace(/[^0-9]/g, '')}?text=${encodedMessage}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
   const openPositions = [
     { title: 'Digital Marketing Specialist', department: 'Marketing', location: 'Remote', type: 'Full-time' },
     { title: 'IT Recruiter', department: 'HR', location: 'Hybrid', type: 'Full-time' },
@@ -65,7 +74,12 @@ const Careers = () => {
                     <span className="meta-item">{position.type}</span>
                   </div>
                 </div>
-                <button className="btn btn-primary">Apply Now</button>
+                <button 
+                  className="btn btn-primary"
+                  onClick={() => handleApplyNow(position)}
+                >
+                  Apply Now
+                </button>
               </div>
             ))}
           </div>
