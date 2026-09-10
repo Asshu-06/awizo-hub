@@ -48,8 +48,8 @@ const About = () => {
       {/* About Content */}
       <section className="section about-content">
         <div className="container">
-          <div className="row">
-            <div className="col-12 col-md-6">
+          <div className="row justify-content-center">
+            <div className="col-12 col-lg-10">
               <h2>Who We Are</h2>
               <p>
                 Founded and led by <strong>Priya, CEO of Awizo Hub</strong>, we are a premier 
@@ -70,15 +70,6 @@ const About = () => {
                 we undertake reflects our dedication to excellence and our passion for empowering our 
                 clients to achieve their full potential.
               </p>
-            </div>
-            <div className="col-12 col-md-6">
-              <div className="about-image">
-                <img 
-                  src="/images/about-team.jpg" 
-                  alt="Awizo Hub Team" 
-                  onError={(e) => e.target.style.display = 'none'}
-                />
-              </div>
             </div>
           </div>
         </div>
