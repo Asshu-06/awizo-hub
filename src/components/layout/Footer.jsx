@@ -12,7 +12,7 @@ import './Footer.css';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  const phoneNumber = '9150795981';
+  const phoneNumber = '78457 87567';
   const whatsappNumber = '917845787567';
   const email = 'info@awizohub.in';
 
