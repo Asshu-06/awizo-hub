@@ -72,17 +72,17 @@ const Home = () => {
         <div className="hero-content">
           {/* Left Side - Text Content */}
           <div className="hero-text">
-            <h1 className="hero-title">
+            <h1 className="hero-title" style={{ color: '#FFFFFF', fontWeight: 900, textShadow: '0 3px 15px rgba(0, 0, 0, 0.3)' }}>
               Transform Your Future with <span className="hero-highlight">Awizo Hub</span>
             </h1>
-            <p className="hero-subtitle">
+            <p className="hero-subtitle" style={{ color: '#FFFFFF', fontWeight: 600, textShadow: '0 2px 10px rgba(0, 0, 0, 0.25)', opacity: 1 }}>
               Your One-Stop Solution for Digital Marketing, IT Careers, Education Abroad, and Online Learning
             </p>
             <div className="hero-cta">
-              <Link to="/contact" className="btn btn-primary btn-lg">
+              <Link to="/contact" className="btn btn-primary btn-lg" style={{ fontWeight: 700, fontSize: '1.125rem' }}>
                 Get Started Today <FaArrowRight />
               </Link>
-              <Link to="/services" className="btn btn-outline btn-lg">
+              <Link to="/services" className="btn btn-outline btn-lg" style={{ fontWeight: 700, fontSize: '1.125rem', color: '#FFFFFF', borderColor: 'rgba(255, 255, 255, 0.6)' }}>
                 Explore Services
               </Link>
             </div>
@@ -90,8 +90,8 @@ const Home = () => {
             {/* Trust Badges */}
             <div className="trust-badges">
               {trustBadges.map((badge, index) => (
-                <div key={index} className="trust-badge">
-                  <badge.icon className="trust-icon" />
+                <div key={index} className="trust-badge" style={{ color: '#FFFFFF', fontWeight: 700, textShadow: '0 2px 8px rgba(0, 0, 0, 0.2)' }}>
+                  <badge.icon className="trust-icon" style={{ fontSize: '1.5rem' }} />
                   <span>{badge.text}</span>
                 </div>
               ))}
