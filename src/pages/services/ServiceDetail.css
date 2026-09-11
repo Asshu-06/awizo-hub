@@ -136,24 +136,20 @@ html {
 
 .service-image {
   border-radius: var(--radius-lg);
-  overflow: hidden;
+  overflow: visible;
   box-shadow: var(--shadow-lg);
   height: auto;
-  min-height: 300px;
-  max-height: 500px;
   background-color: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
 }
 
 .service-image img,
 .service-image video {
   width: 100%;
   height: auto;
-  max-height: 500px;
-  object-fit: cover;
+  object-fit: none;
   display: block;
+  border-radius: var(--radius-lg);
 }
 
 /* Services List Section */
@@ -201,20 +197,19 @@ html {
 .service-video-container {
   width: 100%;
   border-radius: var(--radius-md);
-  overflow: hidden;
+  overflow: visible;
   margin-bottom: var(--spacing-md);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   background-color: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
 }
 
 .service-video {
   width: 100%;
   height: auto;
-  object-fit: cover;
+  object-fit: none;
   display: block;
+  border-radius: var(--radius-md);
 }
 
 /* Service Inquiry Form */
@@ -307,20 +302,19 @@ html {
   grid-column: 2;
   grid-row: 1;
   border-radius: var(--radius-lg);
-  overflow: hidden;
+  overflow: visible;
   box-shadow: var(--shadow-lg);
   background-color: transparent;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
 }
 
 .features-offer-video video {
   width: 100%;
   height: auto;
-  object-fit: cover;
+  object-fit: none;
   display: block;
+  border-radius: var(--radius-lg);
 }
 
 .features-list {
@@ -591,7 +585,13 @@ html {
   .features-offer-video {
     grid-column: 1;
     grid-row: 1;
-    aspect-ratio: 16 / 9;
+    height: auto;
+    overflow: visible;
+  }
+  
+  .features-offer-video video {
+    width: 100%;
+    height: auto;
   }
 
   .features-list {
@@ -604,7 +604,20 @@ html {
   .service-process-grid {
     grid-template-columns: 1fr;
   }
+  
+  .service-image {
+    margin-bottom: var(--spacing-lg);
+    height: auto;
+    overflow: visible;
+  }
+  
+  .service-image video,
+  .service-image img {
+    width: 100%;
+    height: auto;
+  }
 }
+
 
 @media (max-width: 480px) {
   .features-section {
@@ -613,10 +626,26 @@ html {
 
   .features-offer-video {
     border-radius: var(--radius-md);
+    height: auto;
+    overflow: visible;
+  }
+  
+  .features-offer-video video {
+    width: 100%;
+    height: auto;
   }
 
   .feature-item {
     padding: var(--spacing-sm);
     font-size: 0.9375rem;
+  }
+  
+  .service-video-container {
+    overflow: visible;
+  }
+  
+  .service-video {
+    width: 100%;
+    height: auto;
   }
 }

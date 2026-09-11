@@ -882,22 +882,17 @@
 .topic-video {
   width: 100%;
   height: auto;
-  min-height: 200px;
-  max-height: 300px;
-  overflow: hidden;
+  overflow: visible;
   background: transparent;
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
 }
 
 .topic-video video {
   width: 100%;
   height: auto;
-  max-height: 300px;
-  object-fit: cover;
   display: block;
+  object-fit: none;
 }
 
 .topic-card h3 {
@@ -963,13 +958,25 @@
   }
   
   .topic-video {
-    height: 200px;
+    height: auto;
+    overflow: visible;
+  }
+  
+  .topic-video video {
+    width: 100%;
+    height: auto;
   }
 }
 
 @media (max-width: 480px) {
   .topic-video {
-    height: 180px;
+    height: auto;
+    overflow: visible;
+  }
+  
+  .topic-video video {
+    width: 100%;
+    height: auto;
   }
   
   .topic-card h3 {

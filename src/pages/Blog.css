@@ -26,21 +26,16 @@
 .blog-image {
   position: relative;
   height: auto;
-  min-height: 200px;
-  max-height: 280px;
   background: transparent;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  overflow: visible;
+  display: block;
 }
 
 .blog-image img,
 .blog-image video {
   width: 100%;
   height: auto;
-  max-height: 280px;
-  object-fit: cover;
+  object-fit: none;
   display: block;
 }
 
