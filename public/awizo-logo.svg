@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Outer Circle -->
+  <circle cx="100" cy="100" r="95" fill="#FFFFFF" stroke="#173B72" stroke-width="4"/>
+  
+  <!-- Compass Ring -->
+  <circle cx="100" cy="100" r="75" fill="none" stroke="#0066CC" stroke-width="6"/>
+  
+  <!-- Letter A -->
+  <path d="M 85 130 L 100 70 L 115 130 M 92 110 L 108 110" 
+        fill="none" stroke="#2FB7A8" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Compass Arrows (4 directions) -->
+  <!-- North Arrow -->
+  <path d="M 100 25 L 105 40 L 100 35 L 95 40 Z" fill="#173B72"/>
+  <line x1="100" y1="25" x2="100" y2="45" stroke="#173B72" stroke-width="3"/>
+  
+  <!-- East Arrow -->
+  <path d="M 175 100 L 160 95 L 165 100 L 160 105 Z" fill="#2FB7A8"/>
+  <line x1="175" y1="100" x2="155" y2="100" stroke="#2FB7A8" stroke-width="3"/>
+  
+  <!-- South Arrow -->
+  <path d="M 100 175 L 95 160 L 100 165 L 105 160 Z" fill="#173B72"/>
+  <line x1="100" y1="175" x2="100" y2="155" stroke="#173B72" stroke-width="3"/>
+  
+  <!-- West Arrow -->
+  <path d="M 25 100 L 40 105 L 35 100 L 40 95 Z" fill="#2FB7A8"/>
+  <line x1="25" y1="100" x2="45" y2="100" stroke="#2FB7A8" stroke-width="3"/>
+  
+  <!-- Center Point -->
+  <circle cx="100" cy="100" r="8" fill="#173B72"/>
+  
+  <!-- Decorative compass lines -->
+  <line x1="65" y1="65" x2="75" y2="75" stroke="#0066CC" stroke-width="2" opacity="0.5"/>
+  <line x1="135" y1="65" x2="125" y2="75" stroke="#0066CC" stroke-width="2" opacity="0.5"/>
+  <line x1="65" y1="135" x2="75" y2="125" stroke="#0066CC" stroke-width="2" opacity="0.5"/>
+  <line x1="135" y1="135" x2="125" y2="125" stroke="#0066CC" stroke-width="2" opacity="0.5"/>
+</svg>
