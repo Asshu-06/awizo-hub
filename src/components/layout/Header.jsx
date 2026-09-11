@@ -173,22 +173,6 @@ const Header = () => {
           <div className="navbar-content">
             {/* Logo */}
             <Link to="/" className="logo" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', padding: '0.25rem 0' }}>
-              <img 
-                src="/awizo-logo.svg" 
-                alt="Awizo Hub Logo" 
-                className="logo-image"
-                style={{ 
-                  height: '50px', 
-                  width: '50px', 
-                  maxWidth: 'none', 
-                  objectFit: 'contain',
-                  display: 'block'
-                }}
-                onError={(e) => {
-                  console.error('Logo failed to load');
-                  e.target.src = '/favicon.svg';
-                }}
-              />
               <span className="logo-text" style={{ display: 'inline', whiteSpace: 'nowrap' }}>Awizo Hub</span>
             </Link>
 

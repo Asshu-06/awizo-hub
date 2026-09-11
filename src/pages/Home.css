@@ -200,12 +200,16 @@
   border: 8px solid var(--white);
   box-shadow: var(--shadow-xl);
   background: var(--bg-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-image-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 85%;
+  height: 85%;
+  object-fit: contain;
+  margin: auto;
 }
 
 /* Decorative Shapes Behind Image */
@@ -877,18 +881,23 @@
 
 .topic-video {
   width: 100%;
-  height: 220px;
+  height: auto;
+  min-height: 200px;
+  max-height: 300px;
   overflow: hidden;
-  background: var(--primary-deep-blue);
+  background: transparent;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .topic-video video {
   width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center;
-  background: #f0f0f0;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+  display: block;
 }
 
 .topic-card h3 {
