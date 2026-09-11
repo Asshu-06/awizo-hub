@@ -102,8 +102,9 @@
   text-decoration: none;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.75rem;
   letter-spacing: -0.02em;
+  padding: 0.25rem 0;
 }
 
 .logo:hover {
@@ -113,8 +114,11 @@
 .logo-image {
   height: 50px;
   width: auto;
+  max-width: none;
   object-fit: contain;
+  object-position: left center;
   transition: transform var(--transition-base);
+  display: block;
 }
 
 .logo-image:hover {
@@ -691,7 +695,12 @@
   }
 
   .logo-image {
-    height: 42px;
+    height: 45px;
+    max-width: none;
+  }
+  
+  .logo {
+    gap: 0.625rem;
   }
 }
 
@@ -747,10 +756,12 @@
   
   .logo {
     font-size: 1.35rem;
+    gap: 0.5rem;
   }
   
   .logo-image {
-    height: 36px;
+    height: 40px;
+    max-width: none;
   }
 
   .navbar {
@@ -774,10 +785,12 @@
   
   .logo {
     font-size: 1.15rem;
+    gap: 0.4rem;
   }
   
   .logo-image {
-    height: 32px;
+    height: 35px;
+    max-width: none;
   }
 
   .topbar-left {
