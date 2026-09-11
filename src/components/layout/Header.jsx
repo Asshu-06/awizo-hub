@@ -172,17 +172,24 @@ const Header = () => {
         <div className="container">
           <div className="navbar-content">
             {/* Logo */}
-            <Link to="/" className="logo">
+            <Link to="/" className="logo" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', padding: '0.25rem 0' }}>
               <img 
-                src="/awizo-logo.png" 
-                alt="Awizo Hub" 
+                src="/favicon.svg" 
+                alt="Awizo Hub Logo" 
                 className="logo-image"
+                style={{ 
+                  height: '50px', 
+                  width: 'auto', 
+                  maxWidth: 'none', 
+                  objectFit: 'contain',
+                  objectPosition: 'left center',
+                  display: 'block'
+                }}
                 onError={(e) => {
-                  e.target.style.display = 'none';
-                  e.target.nextSibling.style.display = 'inline';
+                  e.target.src = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="70" font-size="70" fill="%232FB7A8">A</text></svg>';
                 }}
               />
-              <span className="logo-text">Awizo Hub</span>
+              <span className="logo-text" style={{ display: 'inline' }}>Awizo Hub</span>
             </Link>
 
             {/* Desktop Navigation */}
