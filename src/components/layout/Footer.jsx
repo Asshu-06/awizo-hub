@@ -3,6 +3,7 @@ import {
   FaFacebookF, 
   FaYoutube, 
   FaInstagram,
+  FaLinkedinIn,
   FaWhatsapp,
   FaEnvelope,
   FaMapMarkerAlt
@@ -11,9 +12,9 @@ import './Footer.css';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  const phoneNumber = '7845787567';
+  const phoneNumber = '9150795981';
   const whatsappNumber = '917845787567';
-  const email = import.meta.env.VITE_EMAIL || 'info@awizohub.com';
+  const email = 'info@awizohub.in';
 
   const services = [
     { name: 'Digital Marketing', path: '/services/digital-marketing' },
@@ -35,9 +36,10 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { name: 'Instagram', icon: FaInstagram, url: 'https://instagram.com/awizohub?igsi=ZXQ3bHlnaTB2azQ=' },
-    { name: 'Facebook', icon: FaFacebookF, url: 'https://facebook.com/share/17zPiCXEoz' },
-    { name: 'YouTube', icon: FaYoutube, url: 'https://www.youtube.com/@awizohubconsultancy' },
+    { name: 'Instagram', icon: FaInstagram, url: 'https://www.instagram.com/awizohub?utm_source=qr&igsh=ZXQ3bHlnaTB2azQ=' },
+    { name: 'Facebook', icon: FaFacebookF, url: 'https://www.facebook.com/profile.php?id=61593237309391' },
+    { name: 'LinkedIn', icon: FaLinkedinIn, url: 'https://www.linkedin.com/company/awizo-hub-consultancy/' },
+    { name: 'YouTube', icon: FaYoutube, url: 'https://www.youtube.com/@Awizohub_Consult' },
     { name: 'WhatsApp', icon: FaWhatsapp, url: `https://wa.me/${whatsappNumber}` },
   ];
 
@@ -48,11 +50,11 @@ const Footer = () => {
           <div className="footer-grid">
             {/* Company Info */}
             <div className="footer-col">
-              <h3 className="footer-title">Awizo Hub</h3>
+              <h3 className="footer-title">Awizo Hub Consultancy</h3>
               <p className="footer-description">
                 Your trusted partner for digital marketing, IT placement, education guidance, 
-                and online learning solutions. We help you achieve your goals with expert 
-                support and personalized services.
+                and online learning solutions. Founded by Ms. Sathya Priya, we help you achieve 
+                your goals with expert support and personalized services.
               </p>
               <div className="footer-social">
                 {socialLinks.map((social) => (
@@ -131,7 +133,7 @@ const Footer = () => {
         <div className="container">
           <div className="footer-bottom-content">
             <p className="copyright">
-              © {currentYear} Awizo Hub. All rights reserved.
+              © {currentYear} Awizo Hub Consultancy. All rights reserved.
             </p>
             <ul className="footer-legal">
               {legalLinks.map((link) => (

@@ -18,9 +18,9 @@ const Header = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const phoneNumber = '7845787567';
+  const phoneNumber = '9150795981';
   const whatsappNumber = '917845787567'; // with country code for WhatsApp
-  const email = import.meta.env.VITE_EMAIL || 'info@awizohub.com';
+  const email = 'info@awizohub.in';
 
   // Scroll to section helper
   const scrollToSection = (sectionId) => {

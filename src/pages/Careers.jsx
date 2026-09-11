@@ -16,6 +16,7 @@ const Careers = () => {
     { title: 'Digital Marketing Specialist', department: 'Marketing', location: 'Remote', type: 'Full-time' },
     { title: 'IT Recruiter', department: 'HR', location: 'Hybrid', type: 'Full-time' },
     { title: 'Education Counselor', department: 'Consulting', location: 'On-site', type: 'Full-time' },
+    { title: 'Web Developer', department: 'Technology', location: 'Remote', type: 'Full-time' },
     { title: 'Content Writer', department: 'Marketing', location: 'Remote', type: 'Part-time' },
     { title: 'Business Development Executive', department: 'Sales', location: 'On-site', type: 'Full-time' }
   ];

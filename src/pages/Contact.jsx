@@ -3,8 +3,8 @@ import ContactForm from '../components/common/ContactForm';
 import './Contact.css';
 
 const Contact = () => {
-  const phoneNumber = '+917845787567';
-  const email = 'info@awizohub.com';
+  const phoneNumber = '+919150795981';
+  const email = 'info@awizohub.in';
   const googleMapsUrl = import.meta.env.VITE_GOOGLE_MAPS_EMBED_URL || '';
 
   const contactInfo = [
@@ -29,7 +29,7 @@ const Contact = () => {
     {
       icon: FaClock,
       title: 'Business Hours',
-      content: 'Mon - Sat: 9:00 AM - 6:00 PM',
+      content: 'Mon - Sat: 9:00 AM - 7:00 PM',
       link: null
     }
   ];

@@ -52,20 +52,20 @@ const About = () => {
             <div className="col-12 col-lg-10">
               <h2>Who We Are</h2>
               <p>
-                Founded and led by <strong>Priya, CEO of Awizo Hub</strong>, we are a premier 
-                service provider with <strong>over 20 years of experience</strong> in digital marketing, 
+                Founded and led by <strong>Ms. Sathya Priya, Founder & CEO of Awizo Hub Consultancy</strong>, 
+                we are a premier service provider with <strong>over 20 years of experience</strong> in digital marketing, 
                 IT placement, education guidance, and online learning solutions. Our journey has been 
                 marked by excellence, innovation, and an unwavering commitment to client success.
               </p>
               <p>
-                With <strong>100+ satisfied clients</strong> across various industries, Awizo Hub 
+                With <strong>100+ satisfied clients</strong> across various industries, Awizo Hub Consultancy 
                 has established itself as a trusted partner for businesses seeking digital transformation 
                 and individuals pursuing career advancement. Our team of seasoned professionals brings 
                 together decades of expertise to offer comprehensive, tailored solutions that deliver 
                 measurable results.
               </p>
               <p>
-                Under Priya's leadership, we've consistently pushed boundaries, embraced cutting-edge 
+                Under Ms. Sathya Priya's leadership, we've consistently pushed boundaries, embraced cutting-edge 
                 technologies, and maintained the highest standards of service delivery. Every project 
                 we undertake reflects our dedication to excellence and our passion for empowering our 
                 clients to achieve their full potential.
