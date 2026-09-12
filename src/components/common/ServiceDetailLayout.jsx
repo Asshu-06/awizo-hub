@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react';
 import ContactForm from './ContactForm';
 import ServiceFeaturesSection from './ServiceFeaturesSection';
 import ServiceExtraContent from './ServiceExtraContent';
@@ -17,6 +18,14 @@ const ServiceDetailLayout = ({
   path,
 }) => {
   const extraContent = additionalPageExtras[path];
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    // Force video reload when path/video changes
+    if (videoRef.current) {
+      videoRef.current.load();
+    }
+  }, [video, path]);
 
   return (
     <div className="service-detail-page">
@@ -39,7 +48,7 @@ const ServiceDetailLayout = ({
             </div>
             <div className="col-12 col-md-6">
               <div className="service-image">
-                <video autoPlay loop muted playsInline>
+                <video ref={videoRef} autoPlay loop muted playsInline key={video}>
                   <source src={video} type="video/mp4" />
                 </video>
               </div>

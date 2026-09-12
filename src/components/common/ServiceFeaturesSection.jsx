@@ -1,7 +1,17 @@
+import { useEffect, useRef } from 'react';
 import { FaCheckCircle } from 'react-icons/fa';
 import '../../pages/services/ServiceDetail.css';
 
 const ServiceFeaturesSection = ({ features, video, subtitle }) => {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    // Force video reload when video changes
+    if (videoRef.current) {
+      videoRef.current.load();
+    }
+  }, [video]);
+
   return (
     <section className="section features-section bg-light">
       <div className="container">
@@ -13,7 +23,7 @@ const ServiceFeaturesSection = ({ features, video, subtitle }) => {
         <div className="features-offer-layout">
           {video && (
             <div className="features-offer-video">
-              <video autoPlay loop muted playsInline>
+              <video ref={videoRef} autoPlay loop muted playsInline key={video}>
                 <source src={video} type="video/mp4" />
               </video>
             </div>
