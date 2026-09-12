@@ -12,6 +12,7 @@ import IntroScreen from './components/common/IntroScreen';
 import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
+import DigitalMarketingLanding from './pages/DigitalMarketingLanding';
 import DigitalMarketing from './pages/services/DigitalMarketing';
 import WebDesign from './pages/services/WebDesign';
 import SEOMarketing from './pages/services/SEOMarketing';
@@ -64,6 +65,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/digital-marketing" element={<DigitalMarketingLanding />} />
             <Route path="/services/digital-marketing" element={<DigitalMarketing />} />
             <Route path="/services/web-design" element={<WebDesign />} />
             <Route path="/services/seo-marketing" element={<SEOMarketing />} />

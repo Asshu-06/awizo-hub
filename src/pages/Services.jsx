@@ -1,68 +1,75 @@
 import { Link } from 'react-router-dom';
-import { FaBullhorn, FaBriefcase, FaGraduationCap, FaLaptop, FaArrowRight, FaCheckCircle } from 'react-icons/fa';
+import { FaArrowRight, FaCheckCircle } from 'react-icons/fa';
 import './Services.css';
+import './Home.css'; // Import Home styles for topic cards
 
 const Services = () => {
   const services = [
     {
-      icon: FaBullhorn,
-      title: 'Digital Marketing Services',
-      description: 'Elevate your brand with data-driven digital marketing strategies that deliver measurable results.',
-      features: [
-        'Meta Ads (Facebook & Instagram)',
-        'Google Ads & PPC Campaigns',
-        'Social Media Marketing',
-        'Lead Generation & Conversion',
-        'Social Media Management',
-        'Creative Design & Posters'
-      ],
-      link: '/services/digital-marketing',
-      color: '#FF6B35'
+      title: 'Web Design & Development',
+      description: 'Custom websites with modern design and optimized performance',
+      videoSrc: '/websitedev.mp4',
+      link: '/services/web-design'
     },
     {
-      icon: FaBriefcase,
+      title: 'SEO & Performance Marketing',
+      description: 'Improve organic search rankings and drive quality traffic',
+      videoSrc: '/sep.mp4',
+      link: '/services/seo-marketing'
+    },
+    {
+      title: 'Cloud Hosting & Infrastructure',
+      description: 'Scalable cloud solutions for your business needs',
+      videoSrc: '/cloudhosting.mp4',
+      link: '/services/cloud-hosting'
+    },
+    {
+      title: 'CRM & Automation',
+      description: 'Streamline your business processes with smart automation',
+      videoSrc: '/crm.mp4',
+      link: '/services/crm-automation'
+    },
+    {
+      title: 'Digital Strategy & Growth',
+      description: 'Strategic planning for sustainable business growth',
+      videoSrc: '/digitalmarketing.mp4',
+      link: '/services/digital-strategy'
+    },
+    {
+      title: 'AI Lead Generation',
+      description: 'Leverage AI to generate and qualify high-quality leads',
+      videoSrc: '/aileads.mp4',
+      link: '/services/ai-lead-generation'
+    },
+    {
+      title: 'Video Editing & Production',
+      description: 'Professional video content for social media and marketing',
+      videoSrc: '/Videoediting.mp4',
+      link: '/services/video-editing'
+    },
+    {
+      title: 'Payment Gateway Integration',
+      description: 'Secure payment processing for your online business',
+      videoSrc: '/payment.mp4',
+      link: '/services/payment-gateway'
+    },
+    {
+      title: 'Online Education',
+      description: 'Access quality online education programs with expert guidance',
+      videoSrc: '/online.mp4',
+      link: '/services/online-education'
+    },
+    {
+      title: 'Study Abroad',
+      description: 'Turn your study abroad dreams into reality with expert counseling',
+      videoSrc: '/abroad education.mp4',
+      link: '/services/abroad-education'
+    },
+    {
       title: 'IT Placement Assistance',
-      description: 'Get expert guidance and support to land your dream IT job with confidence.',
-      features: [
-        'IT Job Placement Support',
-        'Professional Resume Building',
-        'Career Counseling & Planning',
-        'Interview Preparation & Coaching',
-        'Industry Insights & Networking',
-        'Job Market Analysis'
-      ],
-      link: '/services/it-placement',
-      color: '#0066CC'
-    },
-    {
-      icon: FaGraduationCap,
-      title: 'Abroad Education Guidance',
-      description: 'Turn your study abroad dreams into reality with comprehensive education counseling.',
-      features: [
-        'University Selection & Shortlisting',
-        'Course Guidance & Planning',
-        'Application Process Support',
-        'Visa Guidance & Documentation',
-        'Scholarship Assistance',
-        'Pre-Departure Briefing'
-      ],
-      link: '/services/abroad-education',
-      color: '#00B4D8'
-    },
-    {
-      icon: FaLaptop,
-      title: 'Online Education Assistance',
-      description: 'Access quality online education programs with expert guidance and support.',
-      features: [
-        'Online Degree Programs',
-        'University & Course Selection',
-        'Admission Process Support',
-        'Program Enrollment Assistance',
-        'Learning Resource Guidance',
-        'Academic Progress Tracking'
-      ],
-      link: '/services/online-education',
-      color: '#28A745'
+      description: 'Launch your IT career with comprehensive placement support',
+      videoSrc: '/job.mp4',
+      link: '/services/it-placement'
     }
   ];
 
@@ -81,27 +88,19 @@ const Services = () => {
       {/* Services Grid */}
       <section className="section services-grid-section">
         <div className="container">
-          <div className="services-grid-detailed">
+          <div className="topics-grid">
             {services.map((service, index) => (
-              <div key={index} className="service-card-detailed">
-                <div className="service-card-header" style={{ backgroundColor: `${service.color}15` }}>
-                  <div className="service-icon-large" style={{ color: service.color }}>
-                    <service.icon />
-                  </div>
-                  <h2>{service.title}</h2>
+              <div key={index} className="topic-card">
+                <div className="topic-video">
+                  <video autoPlay loop muted playsInline>
+                    <source src={service.videoSrc} type="video/mp4" />
+                  </video>
                 </div>
-                <div className="service-card-body">
-                  <p className="service-description-detailed">{service.description}</p>
-                  <h4>Key Features:</h4>
-                  <ul className="service-features-detailed">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx}>{feature}</li>
-                    ))}
-                  </ul>
-                  <Link to={service.link} className="btn btn-primary">
-                    Learn More <FaArrowRight />
-                  </Link>
-                </div>
+                <h3>{service.title}</h3>
+                <p>{service.description}</p>
+                <Link to={service.link} className="topic-link">
+                  Learn More <FaArrowRight />
+                </Link>
               </div>
             ))}
           </div>

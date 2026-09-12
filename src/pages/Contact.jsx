@@ -1,18 +1,19 @@
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
+import { FaWhatsapp, FaEnvelope, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
 import ContactForm from '../components/common/ContactForm';
 import './Contact.css';
 
 const Contact = () => {
-  const phoneNumber = '+919150795981';
+  const whatsappNumber = '917845787567';
+  const displayNumber = '+91 78457 87567';
   const email = 'info@awizohub.in';
   const googleMapsUrl = import.meta.env.VITE_GOOGLE_MAPS_EMBED_URL || '';
 
   const contactInfo = [
     {
-      icon: FaPhone,
-      title: 'Phone',
-      content: phoneNumber,
-      link: `tel:${phoneNumber}`
+      icon: FaWhatsapp,
+      title: 'WhatsApp',
+      content: displayNumber,
+      link: `https://wa.me/${whatsappNumber}`
     },
     {
       icon: FaEnvelope,
